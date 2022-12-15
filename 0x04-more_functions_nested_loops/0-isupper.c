@@ -2,12 +2,12 @@
 /**
  * _isupper - checks uppercase letters
  * @c: print int
- * Return: guve 1 or 0
+ * Return: give 1 or 0
  */
 
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'z')
+	if (c >= '65' && c <= '90')
 {
 	return (1);
 }
