@@ -5,7 +5,7 @@
  * Return: void
  */
 
-int main(void)
+void fizz_buzz(void)
 {
 	int p = 100;
 	int i;
