@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /*
- * _strpbrk - function locates the first occurrence
- * in the string s of any of the bytes in the string accept
+ * _strpbrk - prints consecutive characters of s1 that are in s2.
  * @s: Source string
  * @accept: searching string
  * Return: new string if a set is matched
