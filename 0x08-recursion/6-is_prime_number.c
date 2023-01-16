@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check - inspects to see if number is prime
+ * check - returns 1 if the input integer is a prime number, otherwise return 0
  * @a:int
  * @b:int
  * Return:int
@@ -17,7 +17,7 @@ int check(int a, int b)
 }
 
 /**
- * is_prime_number - evaluates if no is prime
+ * is_prime_number - checks if int is prime or not
  * @n:int
  * Return:int
  */
