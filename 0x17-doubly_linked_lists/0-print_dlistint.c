@@ -9,24 +9,24 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-        int count;
-        const dlistint_t *crnt;
+int count;
+const dlistint_t *crnt;
 
-        count = 0;
-        crnt = h;
+count = 0;
+crnt = h;
 
-        if (h == NULL)
-                return (count);
+if (h == NULL)
+return (count);
 
-        while (crnt->prev != NULL)
-                crnt = crnt->prev;
+while (crnt->prev != NULL)
+crnt = crnt->prev;
 
-        while (crnt != NULL)
-        {
-                printf("%d\n", crnt->n);
-                count++;
-                crnt = crnt->next;
-        }
+while (crnt != NULL)
+{
+printf("%d\n", crnt->n);
+count++;
+crnt = crnt->next;
+}
 
-        return (count);
+return (count);
 }
