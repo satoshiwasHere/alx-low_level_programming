@@ -29,11 +29,11 @@ def island_perimeter(grid):
     """
 
     perimeter = 0
-    x = 0
-    while x < len(grid):
-        y = 0
-        while y < len(grid[x]):
+
+    for x in range(len(grid)):
+        for y in range(len(grid[x])):
             if grid[x][y]:
+
                 perimeter += num_water_neighbors(grid, x, y)
-            y += 1
-        x += 1
+
+    return perimeter
