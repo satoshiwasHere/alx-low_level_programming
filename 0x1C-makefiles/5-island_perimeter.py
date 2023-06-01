@@ -1,55 +1,39 @@
 #!/usr/bin/python3
-"""
-package evaluates an island perimeter in a grid.
-"""
 
-
-def num_water_neighbors(grid, x, f):
     """
-    Returns the number of neighbouring cells in a grid
+    calculates and returns the no. of water neighbors in a cell grid
     """
 
-    num = 0;
+def num_water_neighbors(grid, x, y):
 
-switch (x)
-{
-    case 0:
-        if (!grid[x - 1][f])
-        {
-            num += 1;
-        }
-    case <len(grid):
-        if (!grid[x][f - 1])
-        {
-            num += 1;
-        }
-        if (!grid[x][f + 1])
-        {
-            num += 1;
-        }
-        if (!grid[x + 1][f])
-        {
-            num += 1;
-        }
-        break;
-    default:
-        break;
-}
+    num = 0
 
-return num;
+    if x > 0 and grid[x - 1][y]:
+        num += 1
+
+    if y > 0 and grid[x][y - 1]:
+        num += 1
+
+    if y < len(grid[x]) - 1 and grid[x][y + 1]:
+        num += 1
+
+    if x < len(grid) - 1 and grid[x + 1][y]:
+        num += 1
+
+    return num
+
 
 def island_perimeter(grid):
     """
-    Returns island's grid perimeter
+    calculates the perimeter of the island
     """
 
     perimeter = 0
-    for x in range(len(grid)):
-        for f in range(len(grid[x])):
-            switch (grid[x][f]) {
-                case true:
-                    perimeter += num_water_neighbors(grid, x, f)
-                    break
-            }
-
-    return perimeter
+    x = 0
+    while x < len(grid):
+        y = 0
+        while y < len(grid[x]):
+            if grid[x][y]:
+                perimeter += num_water_neighbors(grid, x, y)
+            y += 1
+        x += 1
