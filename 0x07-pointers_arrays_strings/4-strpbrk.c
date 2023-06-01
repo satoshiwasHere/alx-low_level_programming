@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /*
- * _strpbrk - prints consecutive characters of s1 that are in s2.
+ * _strpbrk - searches a string for any of a set of bytes
  * @s: Source string
  * @accept: searching string
- * Return: new string if a set is matched
- * NULL - if no such byte is found
+ * Return: new string
  */
 char *_strpbrk(char *s, char *accept)
 {

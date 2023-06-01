@@ -1,0 +1,5 @@
+school: main.c school.c
+	
+	$(CC) $(SRC) -o school 
+	-O2
+	-Wall
